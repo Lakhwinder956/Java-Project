@@ -1,0 +1,88 @@
+//Lakhwinder Singh
+//201906267
+//08-04-2021
+//Class IN2203 Section Number-2
+//Java Project: TheJungle
+
+
+import java.util.*;
+
+public class TheJungle{
+
+ /*
+
+
+
+ */
+ 
+ public static void main(String [] args){
+  System.out.println("starting application");
+  TheCompetition c = new TheCompetition();
+  c.Run();
+  c.Test();
+
+ }
+
+}
+
+
+class TheCompetition{
+ // TheCompetition class will be the main organizer Boss Program to run all the work
+ // This will be the Supervisor Program
+ Lion [] lions;
+ Tiger [] tigers;
+
+
+ public void Run(){
+  // from here I will call all the other methods that are making the Algorithm to execute
+  // start by generating 10 Lions and 10 Tigers
+  lions = new Lion[10];
+  tigers = new Tiger[10];
+
+  for(int i= 0; i<10; i++){
+   lions[i] = new Lion();
+   tigers[i] = new Tiger();
+  }
+
+ }
+
+ public void Test(){
+  int a, b;
+  for (int i=0; i<10; i++){
+   a = (lions[i]).catStrength;
+   b = (tigers[i]).catStrength;
+   System.out.print(a);
+   System.out.print(" ");
+   System.out.println(b);
+  }
+ }
+
+}
+
+
+class Feline{
+ String catName;
+ int catStrength;
+
+ public Feline(){
+  Random rnumber = new Random();
+  catStrength = rnumber.nextInt(100);
+ }
+
+ 
+}
+
+class Lion extends Feline{
+ public Lion(){
+  super();
+ }
+
+
+}
+
+class Tiger extends Feline{
+ public Tiger(){
+ super(); 
+ }
+
+}
